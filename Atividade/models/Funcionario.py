@@ -3,9 +3,9 @@ from Atividade.models.Endereco import Endereco
 
 class Funcionario(abstractmethod):
     def __init__(self, nome: str, telefone: str, email: str, endereco: Endereco) -> None:
-        self.nome = nome
-        self.telefone = telefone
-        self.email = email
+        self.nome = self._verificar_nome(nome)
+        self.telefone = self._verificar_telefone(telefone)
+        self.email = self._verificar_email(email)
         self.endereco = endereco
 
     def __str__(self) -> str:
