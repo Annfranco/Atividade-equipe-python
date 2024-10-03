@@ -1,6 +1,6 @@
 import pytest
 
-from Atividade.models.Endereco import Endereco
+from Atividade.models.endereco import Endereco
 
 @pytest.fixture
 def endereco_valido():
