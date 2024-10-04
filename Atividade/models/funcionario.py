@@ -1,11 +1,11 @@
-from abc import abstractmethod
+from abc import ABC,abstractmethod
 from Atividade.models.endereco import Endereco
 
-class Funcionario(abstractmethod):
+class Funcionario(ABC):
     def __init__(self, nome: str, telefone: str, email: str, endereco: Endereco) -> None:
-        self.nome = self._verificar_nome(nome)
-        self.telefone = self._verificar_telefone(telefone)
-        self.email = self._verificar_email(email)
+        self.nome = nome
+        self.telefone = telefone
+        self.email = email
         self.endereco = endereco
 
     def __str__(self) -> str:

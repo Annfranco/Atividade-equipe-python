@@ -22,22 +22,22 @@ def test_endereco_cep_valido(endereco_valido):
 def test_endereco_cidade_valido(endereco_valido):
     assert endereco_valido.cidade == "Salvador"
 
-def test_endereco_logradouro_vazio_retorna_mensagem_erro(endereco_valido):
+def test_endereco_logradouro_vazio_retorna_mensagem_erro():
     with pytest.raises(ValueError, match="O que está sendo solicitado está vazio."):
         Endereco("", "210", "Terreo", "4100-210", "Salvador")
 
-def test_endereco_numero_vazio_retorna_mensagem_erro(endereco_valido):
+def test_endereco_numero_vazio_retorna_mensagem_erro():
     with pytest.raises(ValueError, match="O que está sendo solicitado está vazio."):
         Endereco("Rua A", "", "Terreo", "4100-210", "Salvador")
 
-def test_endereco_complemento_vazio_retorna_mensagem_erro(endereco_valido):
+def test_endereco_complemento_vazio_retorna_mensagem_erro():
     with pytest.raises(ValueError, match="O que está sendo solicitado está vazio."):
         Endereco("Rua A", "210", "", "4100-210", "Salvador")
 
-def test_endereco_cep_vazio_retorna_mensagem_erro(endereco_valido):
+def test_endereco_cep_vazio_retorna_mensagem_erro():
     with pytest.raises(ValueError, match="O que está sendo solicitado está vazio."):
         Endereco("Rua A", "210", "Terreo", "", "Salvador")
 
-def test_endereco_cidade_vazio_retorna_mensagem_erro(endereco_valido):
+def test_endereco_cidade_vazio_retorna_mensagem_erro():
     with pytest.raises(ValueError, match="O que está sendo solicitado está vazio."):
         Endereco("Rua A", "210", "Terreo", "4100-210", "")
