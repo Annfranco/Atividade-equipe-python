@@ -61,23 +61,3 @@ def test_medico_crm_vazio_retorna_mensagem_erro():
         Medico("Marta", "(71)91111-1111", "marta@gmail.com", "", 
                     Endereco("Rua Santos", "123", "N/D", "123.456.789", "Salvador"))
         
-# def test_medico_endereco_logradouro_vazio_retorna_mensagem_erro():
-#     with pytest.raises(TypeError, match="O nome não deve estar vazio."):
-#         Medico("", "(71)91111-1111", "marta@gmail.com", "123456", 
-#                     Endereco("Rua Santos", "123", "N/D", "123.456.789", "Salvador"))
-# def test_medico_nome_vazio_retorna_mensagem_erro():
-#     with pytest.raises(TypeError, match="O nome não deve estar vazio."):
-#         Medico("", "(71)91111-1111", "marta@gmail.com", "123456", 
-#                     Endereco("Rua Santos", "123", "N/D", "123.456.789", "Salvador"))
-# def test_medico_nome_vazio_retorna_mensagem_erro():
-#     with pytest.raises(TypeError, match="O nome não deve estar vazio."):
-#         Medico("", "(71)91111-1111", "marta@gmail.com", "123456", 
-#                     Endereco("Rua Santos", "123", "N/D", "123.456.789", "Salvador"))
-# def test_medico_nome_vazio_retorna_mensagem_erro():
-#     with pytest.raises(TypeError, match="O nome não deve estar vazio."):
-#         Medico("", "(71)91111-1111", "marta@gmail.com", "123456", 
-#                     Endereco("Rua Santos", "123", "N/D", "123.456.789", "Salvador"))
-# def test_medico_nome_vazio_retorna_mensagem_erro():
-#     with pytest.raises(TypeError, match="O nome não deve estar vazio."):
-#         Medico("", "(71)91111-1111", "marta@gmail.com", "123456", 
-#                     Endereco("Rua Santos", "123", "N/D", "123.456.789", "Salvador"))

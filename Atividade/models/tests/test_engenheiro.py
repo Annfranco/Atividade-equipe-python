@@ -1,7 +1,7 @@
 import pytest
 
-from Atividade.models.endereco import Endereco
 from Atividade.models.engenheiro import Engenheiro
+from Atividade.models.endereco import Endereco
 
 @pytest.fixture
 def engenheiro_valido():
