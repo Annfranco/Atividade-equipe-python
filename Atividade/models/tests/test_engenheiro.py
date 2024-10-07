@@ -42,7 +42,7 @@ def test_engenheiro_nome_vazio_mensagem_erro():
                     Endereco("Artêmia", "155E", "Condomínio", "40700-000", "Feira de Santana"))
         
 def test_engenheiro_nome_tipo_invalido_mensagem_erro():
-    with pytest.raises(TypeError, match= "O número de telefone não pode estar vazio!"):
+    with pytest.raises(TypeError, match= "O nome deve ser um texto"):
         Engenheiro(222, "(75)97777-6666", "ediberto.engenheiro@gmail.com", "555-05", 
                     Endereco("Artêmia", "155E", "Condomínio", "40700-000", "Feira de Santana"))
 
