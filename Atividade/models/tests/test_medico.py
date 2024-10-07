@@ -56,8 +56,14 @@ def test_medico_email_vazio_retorna_mensagem_erro():
         Medico("Marta", "(71)91111-1111", "", "123456", 
                     Endereco("Rua Santos", "123", "N/D", "123.456.789", "Salvador"))
         
+def test_medico_email_vazio_retorna_mensagem_erro():
+    with pytest.raises(TypeError, match="O e-mail deve ser um texto."):
+        Medico("Marta", "(71)91111-1111", 56, "123456", 
+                    Endereco("Rua Santos", "123", "N/D", "123.456.789", "Salvador"))
+        
 def test_medico_crm_vazio_retorna_mensagem_erro():
     with pytest.raises(TypeError, match="O CRM não deve estar vazio."):
         Medico("Marta", "(71)91111-1111", "marta@gmail.com", "", 
                     Endereco("Rua Santos", "123", "N/D", "123.456.789", "Salvador"))
+        
         
