@@ -8,7 +8,7 @@ class Engenheiro(Funcionario):
                          self._verificar_telefone_engenheiro(telefone), 
                          self._verificar_email_engenheiro(email), endereco)
         
-        self.crea = self._verificar_crea_engenheiro(crea), 
+        self.crea = self._verificar_crea_engenheiro(crea)
 
 
     def _verificar_nome_engenheiro(self, nome):
