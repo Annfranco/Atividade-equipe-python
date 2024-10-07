@@ -1,6 +1,5 @@
 class Endereco:
     def __init__(self, logradouro: str, numero: str, complemento: str, cep: str, cidade: str) -> None:
-        
         self.logradouro = self._verificar_logradouro_endereco(logradouro)
         self.numero = self._verificar_numero_endereco(numero)
         self.complemento = self._verificar_complemento_endereco(complemento)
