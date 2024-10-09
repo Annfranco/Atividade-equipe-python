@@ -50,6 +50,11 @@ def test_engenheiro_telefone_vazio_mensagem_erro():
     with pytest.raises(TypeError, match= "O número de telefone não pode estar vazio!"):
         Engenheiro("Ediberto", "", "ediberto.engenheiro@gmail.com", "555-05", 
                     Endereco("Artêmia", "155E", "Condomínio", "40700-000", "Feira de Santana"))     
+        
+def test_engenheiro_telefone_tipo_invalido_mensagem_erro():
+    with pytest.raises(TypeError, match= "O telefone deve ser um texto"):
+        Engenheiro("Ediberto", 75.977776666, "ediberto.engenheiro@gmail.com", "555-05", 
+                    Endereco("Artêmia", "155E", "Condomínio", "40700-000", "Feira de Santana"))             
            
 def test_engenheiro_email_vazio_mensagem_erro():
     with pytest.raises(TypeError, match= "O email não pode estar vazio!"):
