@@ -61,7 +61,17 @@ def test_engenheiro_email_vazio_mensagem_erro():
         Engenheiro("Ediberto", "(75)97777-6666", "", "555-05", 
                     Endereco("Artêmia", "155E", "Condomínio", "40700-000", "Feira de Santana"))   
              
+def test_engenheiro_email_tipo_invalido_mensagem_erro():
+    with pytest.raises(TypeError, match= "O email deve ser um texto"):
+        Engenheiro("Ediberto", "(75)97777-6666", 1111, "555-05", 
+                    Endereco("Artêmia", "155E", "Condomínio", "40700-000", "Feira de Santana"))   
+        
 def test_engenheiro_crea_vazio_mensagem_erro():
     with pytest.raises(TypeError, match= "O crea não pode estar vazio!"):
         Engenheiro("Ediberto", "(75)97777-6666", "ediberto.engenheiro@gmail.com", "", 
+                    Endereco("Artêmia", "155E", "Condomínio", "40700-000", "Feira de Santana")) 
+               
+def test_engenheiro_crea_tipo_invalido_mensagem_erro():
+    with pytest.raises(TypeError, match= "O crea deve ser um texto"):
+        Engenheiro("Ediberto", "(75)97777-6666", "ediberto.engenheiro@gmail.com", 1.2, 
                     Endereco("Artêmia", "155E", "Condomínio", "40700-000", "Feira de Santana"))        
